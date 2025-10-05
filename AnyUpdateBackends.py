@@ -4,9 +4,10 @@ from flask import Flask, jsonify, request
 
 class GameInfo():
     def __init__(self):
-        self.TitleId : str = ""
-        self.SecretKey : str = ""
-        self.ApiKey : str = ""
+        self.TitleId : str = "1C78D"
+        self.SecretKey : str = "YMRYXNBQU79X1RPON5M4ZCBZE5JSG6YN5HOW6RQ1R47IPFA5XM"
+        self.ApiKey : str = "9968230449946644"
+"
 
     def GetAuthHeaders(self) -> dict:
         return {
@@ -297,5 +298,6 @@ def photonauthenticaet():
         return jsonify({"Message": "Use a POST or GET Method instead of " + request.method.upper()})
 
 if __name__ == "__main__":
+
 
     app.run("0.0.0.0", 8080)
